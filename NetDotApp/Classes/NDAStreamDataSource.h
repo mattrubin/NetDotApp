@@ -13,6 +13,8 @@
 
 @property (nonatomic, weak) UITableView *tableView;
 
-- (void)fetch;
+- (void)fetchLatest;
+- (void)fetchNewer;
+- (void)fetchOlder;
 
 @end

@@ -54,7 +54,7 @@
         _dataSource = dataSource;
         self.tableView.dataSource = dataSource;
         dataSource.tableView = self.tableView;
-        [dataSource fetch];
+        [dataSource fetchLatest];
     }
 }
 

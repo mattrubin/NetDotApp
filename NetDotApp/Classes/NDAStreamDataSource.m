@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) NSMutableArray *posts;
 
+@property (nonatomic, copy) NSString *maxId;
+@property (nonatomic, copy) NSString *minId;
+
 @end
 
 
@@ -27,13 +30,53 @@
     return self;
 }
 
-- (void)fetch
+
+#pragma mark - Fetch
+
+- (void)fetchLatest
 {
-    [[ADNClient sharedClient] getGlobalStreamWithCompletionHandler:^(NSArray *objects, NSError *error) {
-        NSLog(@"Fetched %i posts...", objects.count);
-        [self.posts addObjectsFromArray:objects];
+    [[ADNClient sharedClient] getGlobalStreamWithParameters:nil
+                                          completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
+     {
+         self.posts = [objects mutableCopy];
+         [self.tableView reloadData];
+         
+         self.maxId = meta.maxId;
+         self.minId = meta.minId;
+     }];
+}
+
+- (void)fetchNewer
+{
+    NSDictionary *parameters = self.maxId ? @{@"since_id":self.maxId} : nil;
+    [[ADNClient sharedClient] getGlobalStreamWithParameters:parameters
+                                          completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
+    {
+        [self.posts insertObjects:objects
+                        atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objects.count)]];
         [self.tableView reloadData];
+        
+        self.maxId = meta.maxId;
+        if (!self.minId) {
+            self.minId = meta.minId;
+        }
     }];
+}
+
+- (void)fetchOlder
+{
+    NSDictionary *parameters = self.minId ? @{@"before_id":self.minId} : nil;
+    [[ADNClient sharedClient] getGlobalStreamWithParameters:parameters
+                                          completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
+     {
+         [self.posts addObjectsFromArray:objects];
+         [self.tableView reloadData];
+         
+         self.minId = meta.minId;
+         if (!self.maxId) {
+             self.maxId = meta.maxId;
+         }
+     }];
 }
 
 
