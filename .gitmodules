@@ -1,0 +1,3 @@
+[submodule "External/AppDotNet"]
+	path = External/AppDotNet
+	url = git@github.com:mattrubin/AppDotNet.git
