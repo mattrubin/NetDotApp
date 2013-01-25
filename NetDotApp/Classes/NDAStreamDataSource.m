@@ -38,10 +38,16 @@
     [[ADNClient sharedClient] getGlobalStreamWithParameters:nil
                                           completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
      {
-         self.posts = [objects mutableCopy];
+         NSLog(@"Fetched %i posts...", objects.count);
          
-         self.maxId = meta.maxId;
-         self.minId = meta.minId;
+         if (objects.count) {
+             self.posts = [objects mutableCopy];
+             
+             self.maxId = meta.maxId;
+             self.minId = meta.minId;
+         } else {
+             // Check for error
+         }
          
          [self.delegate dataSourceDidFinishFetching:self];
      }];
@@ -53,12 +59,19 @@
     [[ADNClient sharedClient] getGlobalStreamWithParameters:parameters
                                           completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
     {
-        [self.posts insertObjects:objects
-                        atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objects.count)]];
+        NSLog(@"Fetched %i new posts...", objects.count);
         
-        self.maxId = meta.maxId;
-        if (!self.minId) {
-            self.minId = meta.minId;
+        if (objects.count) {
+            [self.posts insertObjects:objects
+                            atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objects.count)]];
+        
+            self.maxId = meta.maxId;
+            if (!self.minId) {
+                self.minId = meta.minId;
+            }
+        } else {
+            // Check for error
+            // If no new posts since since_id, code will still be 200, with 0 objects
         }
         
         [self.delegate dataSourceDidFinishFetching:self];
@@ -71,11 +84,17 @@
     [[ADNClient sharedClient] getGlobalStreamWithParameters:parameters
                                           completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
      {
-         [self.posts addObjectsFromArray:objects];
+         NSLog(@"Fetched %i older posts...", objects.count);
          
-         self.minId = meta.minId;
-         if (!self.maxId) {
-             self.maxId = meta.maxId;
+         if (objects.count) {
+             [self.posts addObjectsFromArray:objects];
+             
+             self.minId = meta.minId;
+             if (!self.maxId) {
+                 self.maxId = meta.maxId;
+             }
+         } else {
+             // Check for error
          }
          
          [self.delegate dataSourceDidFinishFetching:self];
@@ -87,13 +106,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"Sections: 1");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Rows in Section %i: %i", section, self.posts.count);
+    NSLog(@"Total posts: %i", self.posts.count);
     return self.posts.count;
 }
 
@@ -104,7 +122,7 @@
     
     // Configure the cell...
     ADNPost *post = [self.posts objectAtIndex:indexPath.row];
-    cell.textLabel.text = post.user.username;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", post.postId, post.user.username];
     cell.detailTextLabel.text = post.text;
     
     return cell;
