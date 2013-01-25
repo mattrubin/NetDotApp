@@ -16,6 +16,10 @@
 		8CC90E6016B2666C00CACB31 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC90E5F16B2666C00CACB31 /* Default.png */; };
 		8CC90E6216B2666C00CACB31 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC90E6116B2666C00CACB31 /* Default@2x.png */; };
 		8CC90E6416B2666C00CACB31 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC90E6316B2666C00CACB31 /* Default-568h@2x.png */; };
+		8CC90E7816B26CF500CACB31 /* libAppDotNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E7516B26BEE00CACB31 /* libAppDotNet.a */; };
+		8CC90EA616B26F4800CACB31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90EA516B26F4800CACB31 /* SystemConfiguration.framework */; };
+		8CC90EA816B26F7900CACB31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90EA716B26F7900CACB31 /* MobileCoreServices.framework */; };
+		8CC90EAA16B2706D00CACB31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90EA916B2706D00CACB31 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,9 @@
 		8CC90E6116B2666C00CACB31 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8CC90E6316B2666C00CACB31 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8CC90E6B16B26BEE00CACB31 /* AppDotNet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppDotNet.xcodeproj; path = AppDotNet/AppDotNet.xcodeproj; sourceTree = "<group>"; };
+		8CC90EA516B26F4800CACB31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8CC90EA716B26F7900CACB31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8CC90EA916B2706D00CACB31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC90E7816B26CF500CACB31 /* libAppDotNet.a in Frameworks */,
 				8CC90E4E16B2666C00CACB31 /* UIKit.framework in Frameworks */,
 				8CC90E5016B2666C00CACB31 /* Foundation.framework in Frameworks */,
 				8CC90E5216B2666C00CACB31 /* CoreGraphics.framework in Frameworks */,
+				8CC90EA616B26F4800CACB31 /* SystemConfiguration.framework in Frameworks */,
+				8CC90EA816B26F7900CACB31 /* MobileCoreServices.framework in Frameworks */,
+				8CC90EAA16B2706D00CACB31 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +101,9 @@
 				8CC90E4D16B2666C00CACB31 /* UIKit.framework */,
 				8CC90E4F16B2666C00CACB31 /* Foundation.framework */,
 				8CC90E5116B2666C00CACB31 /* CoreGraphics.framework */,
+				8CC90EA516B26F4800CACB31 /* SystemConfiguration.framework */,
+				8CC90EA716B26F7900CACB31 /* MobileCoreServices.framework */,
+				8CC90EA916B2706D00CACB31 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,7 +312,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetDotApp/NetDotApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+				);
 				INFOPLIST_FILE = "NetDotApp/NetDotApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -309,7 +331,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetDotApp/NetDotApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+				);
 				INFOPLIST_FILE = "NetDotApp/NetDotApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -334,6 +364,7 @@
 				8CC90E6916B2666C00CACB31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
