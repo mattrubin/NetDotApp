@@ -20,6 +20,9 @@
 		8CC90EA616B26F4800CACB31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90EA516B26F4800CACB31 /* SystemConfiguration.framework */; };
 		8CC90EA816B26F7900CACB31 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90EA716B26F7900CACB31 /* MobileCoreServices.framework */; };
 		8CC90EAA16B2706D00CACB31 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90EA916B2706D00CACB31 /* CoreLocation.framework */; };
+		8CC90ED716B283D800CACB31 /* NDAStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC90ED616B283D800CACB31 /* NDAStreamViewController.m */; };
+		8CC90EDA16B3103400CACB31 /* NDAStreamDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC90ED916B3103400CACB31 /* NDAStreamDataSource.m */; };
+		8CC90EDD16B31DBE00CACB31 /* NDAPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC90EDC16B31DBE00CACB31 /* NDAPostCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 		8CC90EA516B26F4800CACB31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8CC90EA716B26F7900CACB31 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8CC90EA916B2706D00CACB31 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8CC90ED516B283D800CACB31 /* NDAStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAStreamViewController.h; sourceTree = "<group>"; };
+		8CC90ED616B283D800CACB31 /* NDAStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAStreamViewController.m; sourceTree = "<group>"; };
+		8CC90ED816B3103400CACB31 /* NDAStreamDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAStreamDataSource.h; sourceTree = "<group>"; };
+		8CC90ED916B3103400CACB31 /* NDAStreamDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAStreamDataSource.m; sourceTree = "<group>"; };
+		8CC90EDB16B31DBE00CACB31 /* NDAPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAPostCell.h; sourceTree = "<group>"; };
+		8CC90EDC16B31DBE00CACB31 /* NDAPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAPostCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +162,12 @@
 			children = (
 				8CC90E5C16B2666C00CACB31 /* NDAAppDelegate.h */,
 				8CC90E5D16B2666C00CACB31 /* NDAAppDelegate.m */,
+				8CC90ED516B283D800CACB31 /* NDAStreamViewController.h */,
+				8CC90ED616B283D800CACB31 /* NDAStreamViewController.m */,
+				8CC90ED816B3103400CACB31 /* NDAStreamDataSource.h */,
+				8CC90ED916B3103400CACB31 /* NDAStreamDataSource.m */,
+				8CC90EDB16B31DBE00CACB31 /* NDAPostCell.h */,
+				8CC90EDC16B31DBE00CACB31 /* NDAPostCell.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -248,6 +263,9 @@
 			files = (
 				8CC90E5A16B2666C00CACB31 /* main.m in Sources */,
 				8CC90E5E16B2666C00CACB31 /* NDAAppDelegate.m in Sources */,
+				8CC90ED716B283D800CACB31 /* NDAStreamViewController.m in Sources */,
+				8CC90EDA16B3103400CACB31 /* NDAStreamDataSource.m in Sources */,
+				8CC90EDD16B31DBE00CACB31 /* NDAPostCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
