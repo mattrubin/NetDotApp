@@ -111,8 +111,7 @@
 		8CC90E5316B2666C00CACB31 /* NetDotApp */ = {
 			isa = PBXGroup;
 			children = (
-				8CC90E5C16B2666C00CACB31 /* NDAAppDelegate.h */,
-				8CC90E5D16B2666C00CACB31 /* NDAAppDelegate.m */,
+				8CC90ED416B27E6400CACB31 /* Classes */,
 				8CC90E5416B2666C00CACB31 /* Supporting Files */,
 			);
 			path = NetDotApp;
@@ -147,6 +146,15 @@
 				8CC90E7716B26BEE00CACB31 /* AppDotNetTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8CC90ED416B27E6400CACB31 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8CC90E5C16B2666C00CACB31 /* NDAAppDelegate.h */,
+				8CC90E5D16B2666C00CACB31 /* NDAAppDelegate.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
