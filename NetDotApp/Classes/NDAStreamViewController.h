@@ -10,7 +10,7 @@
 #import "NDAStreamDataSource.h"
 
 
-@interface NDAStreamViewController : UITableViewController
+@interface NDAStreamViewController : UITableViewController <NDAStreamDataSourceDelegate>
 
 @property (nonatomic, strong) NDAStreamDataSource *dataSource;
 

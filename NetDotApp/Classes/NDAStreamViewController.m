@@ -24,6 +24,9 @@
         // Custom initialization
         self.dataSource = [[NDAStreamDataSource alloc] init];
         [self.tableView registerClass:[NDAPostCell class] forCellReuseIdentifier:@"PostCell"];
+        
+        self.refreshControl = [[UIRefreshControl alloc] init];
+        [self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
     }
     return self;
 }
@@ -46,16 +49,27 @@
 }
 
 
-#pragma Mark - Accessors
+#pragma mark - Data Source
 
 - (void)setDataSource:(NDAStreamDataSource *)dataSource
 {
     if (_dataSource != dataSource) {
         _dataSource = dataSource;
         self.tableView.dataSource = dataSource;
-        dataSource.tableView = self.tableView;
+        dataSource.delegate = self;
         [dataSource fetchLatest];
     }
+}
+
+- (void)refresh
+{
+    [self.dataSource fetchNewer];
+}
+
+- (void)dataSourceDidFinishFetching:(NDAStreamDataSource *)dataSource
+{
+    [self.refreshControl endRefreshing];
+    [self.tableView reloadData];
 }
 
 

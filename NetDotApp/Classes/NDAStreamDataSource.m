@@ -39,10 +39,11 @@
                                           completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
      {
          self.posts = [objects mutableCopy];
-         [self.tableView reloadData];
          
          self.maxId = meta.maxId;
          self.minId = meta.minId;
+         
+         [self.delegate dataSourceDidFinishFetching:self];
      }];
 }
 
@@ -54,12 +55,13 @@
     {
         [self.posts insertObjects:objects
                         atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objects.count)]];
-        [self.tableView reloadData];
         
         self.maxId = meta.maxId;
         if (!self.minId) {
             self.minId = meta.minId;
         }
+        
+        [self.delegate dataSourceDidFinishFetching:self];
     }];
 }
 
@@ -70,12 +72,13 @@
                                           completionHandler:^(NSArray *objects, ADNMetadata *meta, NSError *error)
      {
          [self.posts addObjectsFromArray:objects];
-         [self.tableView reloadData];
          
          self.minId = meta.minId;
          if (!self.maxId) {
              self.maxId = meta.maxId;
          }
+         
+         [self.delegate dataSourceDidFinishFetching:self];
      }];
 }
 

@@ -9,9 +9,19 @@
 #import <Foundation/Foundation.h>
 
 
+@class NDAStreamDataSource;
+
+
+@protocol NDAStreamDataSourceDelegate <NSObject>
+
+- (void)dataSourceDidFinishFetching:(NDAStreamDataSource *)dataSource;
+
+@end
+
+
 @interface NDAStreamDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, weak) id <NDAStreamDataSourceDelegate> delegate;
 
 - (void)fetchLatest;
 - (void)fetchNewer;
