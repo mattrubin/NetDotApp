@@ -65,17 +65,21 @@
         if (objects.count) {
             [self.posts insertObjects:objects
                             atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, objects.count)]];
-        
+            
             self.maxId = meta.maxId;
-            if (!self.minId) {
-                self.minId = meta.minId;
+            
+            NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:objects.count];
+            for (NSInteger row = 0; row < objects.count; row++) {
+                [indexPaths addObject:[NSIndexPath indexPathForRow:row inSection:0]];
             }
+            [self.delegate dataSource:self didFinishFetchingWithIndexPaths:indexPaths];
+            
         } else {
             // Check for error
             // If no new posts since since_id, code will still be 200, with 0 objects
+            
+            [self.delegate dataSourceDidFinishFetching:self];
         }
-        
-        [self.delegate dataSourceDidFinishFetching:self];
     }];
 }
 
@@ -91,9 +95,6 @@
              [self.posts addObjectsFromArray:objects];
              
              self.minId = meta.minId;
-             if (!self.maxId) {
-                 self.maxId = meta.maxId;
-             }
          } else {
              // Check for error
          }

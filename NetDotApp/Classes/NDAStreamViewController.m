@@ -72,6 +72,21 @@
     [self.tableView reloadData];
 }
 
+- (void)dataSource:(NDAStreamDataSource *)dataSource didFinishFetchingWithIndexPaths:(NSArray *)indexPaths
+{
+    [self.refreshControl endRefreshing];
+    [self.tableView reloadData];
+
+    CGPoint offset = self.tableView.contentOffset;
+    offset.y -= self.refreshControl.frame.size.height;
+    for (NSIndexPath *indexPath in indexPaths) {
+        offset.y += [self tableView:self.tableView heightForRowAtIndexPath:indexPath];
+    }
+    
+    [self.tableView setContentOffset:offset animated:NO];
+    offset.y += self.refreshControl.frame.size.height;
+    [self.tableView setContentOffset:offset animated:YES];
+}
 
 #pragma mark - Table view delegate
 

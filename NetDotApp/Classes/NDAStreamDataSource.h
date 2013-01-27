@@ -15,6 +15,7 @@
 @protocol NDAStreamDataSourceDelegate <NSObject>
 
 - (void)dataSourceDidFinishFetching:(NDAStreamDataSource *)dataSource;
+- (void)dataSource:(NDAStreamDataSource *)dataSource didFinishFetchingWithIndexPaths:(NSArray *)indexPaths;
 
 @end
 
