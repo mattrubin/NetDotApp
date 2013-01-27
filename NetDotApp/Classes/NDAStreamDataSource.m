@@ -7,6 +7,7 @@
 //
 
 #import "NDAStreamDataSource.h"
+#import <AppDotNet/UIImageView+AFNetworking.h>
 
 
 @interface NDAStreamDataSource ()
@@ -124,6 +125,7 @@
     ADNPost *post = [self.posts objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", post.postId, post.user.username];
     cell.detailTextLabel.text = post.text;
+    [cell.imageView setImageWithURL:[NSURL URLWithString:post.user.avatarImage.url] placeholderImage:[UIImage imageNamed:@"Default.png"]];
     
     return cell;
 }
