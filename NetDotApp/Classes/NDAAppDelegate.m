@@ -7,7 +7,7 @@
 //
 
 #import "NDAAppDelegate.h"
-#import "NDAStreamViewController.h"
+#import "NDAFileTableViewController.h"
 
 
 @implementation NDAAppDelegate
@@ -16,7 +16,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.rootViewController = [[NDAStreamViewController alloc] init];
+    
+    [[ADNClient sharedClient] setAccessToken:nil];
+    
+    self.window.rootViewController = [[NDAFileTableViewController alloc] init];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
