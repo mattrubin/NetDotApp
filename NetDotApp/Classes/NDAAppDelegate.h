@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NDAAuthenticationViewController.h"
 
-@interface NDAAppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface NDAAppDelegate : UIResponder <UIApplicationDelegate, NDAAuthenticationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) NDAAuthenticationViewController *authController;
 
 @end

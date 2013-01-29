@@ -17,14 +17,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    [[ADNClient sharedClient] setAccessToken:nil];
+    self.authController = [NDAAuthenticationViewController new];
+    self.authController.delegate = self;
+    self.window.rootViewController = self.authController;
     
-    self.window.rootViewController = [[NDAFileTableViewController alloc] init];
-    
-    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)authenticationComplete
+{
+    UIViewController *newViewController = [NDAFileTableViewController new];
+    
+    [UIView transitionFromView:self.window.rootViewController.view
+                        toView:newViewController.view
+                      duration:0.65f
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    completion:^(BOOL finished)
+     {
+         self.window.rootViewController = newViewController;
+     }];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
