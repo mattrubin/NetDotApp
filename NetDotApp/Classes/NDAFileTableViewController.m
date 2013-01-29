@@ -22,6 +22,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        self.title = @"Files";
+        
         self.dataSource = [[NDAFileTableDataSource alloc] init];
         [self.tableView registerClass:[NDAFileCell class] forCellReuseIdentifier:@"FileCell"];
         
