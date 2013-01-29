@@ -119,14 +119,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"PostCell";
+    static NSString *CellIdentifier = @"FileCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    ADNPost *post = [self.files objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", post.postId, post.user.username];
-    cell.detailTextLabel.text = post.text;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:post.user.avatarImage.url] placeholderImage:[UIImage imageNamed:@"Default.png"]];
+    ADNFile *file = [self.files objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", file.fileId, file.name];
+    cell.detailTextLabel.text = file.kind;
+    [cell.imageView setImageWithURL:[[file.derivedFiles objectForKey:ADNDerivedFileKeyImageThumb200s] url]
+                   placeholderImage:[UIImage imageNamed:@"alpha-icon.png"]];
     
     return cell;
 }
