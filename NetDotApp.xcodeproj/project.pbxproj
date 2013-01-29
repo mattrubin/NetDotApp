@@ -14,6 +14,7 @@
 		8C6661A916B75DF10056A64B /* ADN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C6661A816B75DF10056A64B /* ADN.plist */; };
 		8C6661AB16B764830056A64B /* alpha-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C6661AA16B764830056A64B /* alpha-icon@2x.png */; };
 		8C6661AD16B764980056A64B /* alpha-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C6661AC16B764980056A64B /* alpha-icon.png */; };
+		8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */; };
 		8CC90E4E16B2666C00CACB31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4D16B2666C00CACB31 /* UIKit.framework */; };
 		8CC90E5016B2666C00CACB31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4F16B2666C00CACB31 /* Foundation.framework */; };
 		8CC90E5216B2666C00CACB31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E5116B2666C00CACB31 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		8C6661A816B75DF10056A64B /* ADN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ADN.plist; sourceTree = "<group>"; };
 		8C6661AA16B764830056A64B /* alpha-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon@2x.png"; sourceTree = "<group>"; };
 		8C6661AC16B764980056A64B /* alpha-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon.png"; sourceTree = "<group>"; };
+		8CC47AB916B78BAA000E6CC6 /* NDAFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileViewController.h; sourceTree = "<group>"; };
+		8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAFileViewController.m; sourceTree = "<group>"; };
 		8CC90E4916B2666C00CACB31 /* NetDotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetDotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC90E4D16B2666C00CACB31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CC90E4F16B2666C00CACB31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,6 +116,8 @@
 				8C66618A16B756570056A64B /* NDAFileTableDataSource.m */,
 				8C66618C16B7574B0056A64B /* NDAFileCell.h */,
 				8C66618D16B7574B0056A64B /* NDAFileCell.m */,
+				8CC47AB916B78BAA000E6CC6 /* NDAFileViewController.h */,
+				8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */,
 			);
 			name = Files;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				8C66618B16B756570056A64B /* NDAFileTableDataSource.m in Sources */,
 				8C66618E16B7574C0056A64B /* NDAFileCell.m in Sources */,
 				8C6661A716B75C3F0056A64B /* NDAAuthenticationViewController.m in Sources */,
+				8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

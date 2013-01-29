@@ -28,4 +28,6 @@
 - (void)fetchNewer;
 - (void)fetchOlder;
 
+- (ADNFile *)fileForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

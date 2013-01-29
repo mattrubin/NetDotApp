@@ -8,6 +8,7 @@
 
 #import "NDAFileTableViewController.h"
 #import "NDAFileCell.h"
+#import "NDAFileViewController.h"
 
 
 @interface NDAFileTableViewController ()
@@ -68,6 +69,16 @@
     [self.tableView setContentOffset:offset animated:NO];
     offset.y += self.refreshControl.frame.size.height;
     [self.tableView setContentOffset:offset animated:YES];
+}
+
+#pragma mark -
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ADNFile *file = [self.dataSource fileForRowAtIndexPath:indexPath];
+    NDAFileViewController *fileVC = [[NDAFileViewController alloc] initWithFile:file];
+    
+    [self.navigationController pushViewController:fileVC animated:YES];
 }
 
 @end

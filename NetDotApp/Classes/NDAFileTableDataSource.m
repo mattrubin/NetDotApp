@@ -132,6 +132,10 @@
     return cell;
 }
 
+- (ADNFile *)fileForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.files objectAtIndex:indexPath.row];
+}
 
 /*
  // Override to support conditional editing of the table view.

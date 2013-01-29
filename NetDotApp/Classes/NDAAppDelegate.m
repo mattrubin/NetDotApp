@@ -28,14 +28,15 @@
 - (void)authenticationComplete
 {
     UIViewController *newViewController = [NDAFileTableViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newViewController];
     
     [UIView transitionFromView:self.window.rootViewController.view
-                        toView:newViewController.view
+                        toView:navController.view
                       duration:0.65f
                        options:UIViewAnimationOptionTransitionFlipFromRight
                     completion:^(BOOL finished)
      {
-         self.window.rootViewController = newViewController;
+         self.window.rootViewController = navController;
      }];
 }
 
