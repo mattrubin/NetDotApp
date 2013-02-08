@@ -20,7 +20,9 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.menuItems = @[[NDAMenuItem menuItemWithTitle:@"User"],
+        self.title = @"Resources";
+        
+        self.menuItems = @[[NDAMenuItem menuItemWithTitle:@"User" nextController:[UITableViewController class]],
                            [NDAMenuItem menuItemWithTitle:@"Post"],
                            [NDAMenuItem menuItemWithTitle:@"Channel"],
                            [NDAMenuItem menuItemWithTitle:@"Message"],
