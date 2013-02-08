@@ -17,6 +17,7 @@
 		8C6DA98B16B844B300A2C851 /* NDAFileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DA98A16B844B300A2C851 /* NDAFileView.xib */; };
 		8C73C32816C4A93B0027027A /* NDAMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */; };
 		8C73C32B16C4AC4F0027027A /* NDAMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */; };
+		8C73C32E16C4ADE40027027A /* NDAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32D16C4ADE40027027A /* NDAMenuViewController.m */; };
 		8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */; };
 		8CC90E4E16B2666C00CACB31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4D16B2666C00CACB31 /* UIKit.framework */; };
 		8CC90E5016B2666C00CACB31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4F16B2666C00CACB31 /* Foundation.framework */; };
@@ -70,6 +71,8 @@
 		8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMainMenuViewController.m; sourceTree = "<group>"; };
 		8C73C32916C4AC4F0027027A /* NDAMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAMenuItem.h; sourceTree = "<group>"; };
 		8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMenuItem.m; sourceTree = "<group>"; };
+		8C73C32C16C4ADE40027027A /* NDAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAMenuViewController.h; sourceTree = "<group>"; };
+		8C73C32D16C4ADE40027027A /* NDAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMenuViewController.m; sourceTree = "<group>"; };
 		8CC47AB916B78BAA000E6CC6 /* NDAFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileViewController.h; sourceTree = "<group>"; };
 		8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAFileViewController.m; sourceTree = "<group>"; };
 		8CC90E4916B2666C00CACB31 /* NetDotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetDotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +139,8 @@
 			children = (
 				8C73C32916C4AC4F0027027A /* NDAMenuItem.h */,
 				8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */,
+				8C73C32C16C4ADE40027027A /* NDAMenuViewController.h */,
+				8C73C32D16C4ADE40027027A /* NDAMenuViewController.m */,
 				8C73C32616C4A93B0027027A /* NDAMainMenuViewController.h */,
 				8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */,
 			);
@@ -340,6 +345,7 @@
 				8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */,
 				8C73C32816C4A93B0027027A /* NDAMainMenuViewController.m in Sources */,
 				8C73C32B16C4AC4F0027027A /* NDAMenuItem.m in Sources */,
+				8C73C32E16C4ADE40027027A /* NDAMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

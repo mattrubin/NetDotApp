@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Matt Rubin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NDAMenuViewController.h"
 
-@interface NDAMainMenuViewController : UITableViewController
+
+@interface NDAMainMenuViewController : NDAMenuViewController
 
 @end
