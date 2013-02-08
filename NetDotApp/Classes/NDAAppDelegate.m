@@ -17,9 +17,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    self.authController = [NDAAuthenticationViewController new];
-    self.authController.delegate = self;
-    self.window.rootViewController = self.authController;
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:kNDAAuthenticationAccessToken];
+    if (!accessToken) {
+        self.authController = [NDAAuthenticationViewController new];
+        self.authController.delegate = self;
+        self.window.rootViewController = self.authController;
+    } else {
+        [[ADNClient sharedClient] setAccessToken:accessToken];
+        UIViewController *newViewController = [NDAFileTableViewController new];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newViewController];
+        self.window.rootViewController = navController;
+    }
     
     [self.window makeKeyAndVisible];
     return YES;

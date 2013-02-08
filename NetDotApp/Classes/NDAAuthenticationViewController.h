@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 
+extern NSString * const kNDAAuthenticationAccessToken;
+
+
 @protocol NDAAuthenticationDelegate <NSObject>
 
 - (void)authenticationComplete;

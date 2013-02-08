@@ -9,6 +9,9 @@
 #import "NDAAuthenticationViewController.h"
 
 
+NSString * const kNDAAuthenticationAccessToken = @"kNDAAuthenticationAccessToken";
+
+
 @interface NDAAuthenticationViewController ()
 
 - (void)handleRedirectURL:(NSURL*)url;
@@ -102,6 +105,9 @@
         //NSLog(@"State: %@", [fragmentVars objectForKey:@"state"]);
         
         [[ADNClient sharedClient] setAccessToken:[fragmentVars objectForKey:@"access_token"]];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:[fragmentVars objectForKey:@"access_token"] forKey:kNDAAuthenticationAccessToken];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         [self.delegate authenticationComplete];
     }
