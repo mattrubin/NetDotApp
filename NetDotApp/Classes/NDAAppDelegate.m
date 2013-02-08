@@ -7,7 +7,7 @@
 //
 
 #import "NDAAppDelegate.h"
-#import "NDAFileTableViewController.h"
+#import "NDAMainMenuViewController.h"
 
 
 @implementation NDAAppDelegate
@@ -24,7 +24,7 @@
         self.window.rootViewController = self.authController;
     } else {
         [[ADNClient sharedClient] setAccessToken:accessToken];
-        UIViewController *newViewController = [NDAFileTableViewController new];
+        UIViewController *newViewController = [NDAMainMenuViewController new];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newViewController];
         self.window.rootViewController = navController;
     }
@@ -35,7 +35,7 @@
 
 - (void)authenticationComplete
 {
-    UIViewController *newViewController = [NDAFileTableViewController new];
+    UIViewController *newViewController = [NDAMainMenuViewController new];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:newViewController];
     
     [UIView transitionFromView:self.window.rootViewController.view

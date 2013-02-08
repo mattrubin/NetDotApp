@@ -15,6 +15,8 @@
 		8C6661AB16B764830056A64B /* alpha-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C6661AA16B764830056A64B /* alpha-icon@2x.png */; };
 		8C6661AD16B764980056A64B /* alpha-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C6661AC16B764980056A64B /* alpha-icon.png */; };
 		8C6DA98B16B844B300A2C851 /* NDAFileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6DA98A16B844B300A2C851 /* NDAFileView.xib */; };
+		8C73C32816C4A93B0027027A /* NDAMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */; };
+		8C73C32B16C4AC4F0027027A /* NDAMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */; };
 		8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */; };
 		8CC90E4E16B2666C00CACB31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4D16B2666C00CACB31 /* UIKit.framework */; };
 		8CC90E5016B2666C00CACB31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4F16B2666C00CACB31 /* Foundation.framework */; };
@@ -64,6 +66,10 @@
 		8C6661AA16B764830056A64B /* alpha-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon@2x.png"; sourceTree = "<group>"; };
 		8C6661AC16B764980056A64B /* alpha-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alpha-icon.png"; sourceTree = "<group>"; };
 		8C6DA98A16B844B300A2C851 /* NDAFileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDAFileView.xib; sourceTree = "<group>"; };
+		8C73C32616C4A93B0027027A /* NDAMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAMainMenuViewController.h; sourceTree = "<group>"; };
+		8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMainMenuViewController.m; sourceTree = "<group>"; };
+		8C73C32916C4AC4F0027027A /* NDAMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAMenuItem.h; sourceTree = "<group>"; };
+		8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMenuItem.m; sourceTree = "<group>"; };
 		8CC47AB916B78BAA000E6CC6 /* NDAFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileViewController.h; sourceTree = "<group>"; };
 		8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAFileViewController.m; sourceTree = "<group>"; };
 		8CC90E4916B2666C00CACB31 /* NetDotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetDotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,17 @@
 				8C6DA98A16B844B300A2C851 /* NDAFileView.xib */,
 			);
 			name = Files;
+			sourceTree = "<group>";
+		};
+		8C73C32316C4A9170027027A /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				8C73C32916C4AC4F0027027A /* NDAMenuItem.h */,
+				8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */,
+				8C73C32616C4A93B0027027A /* NDAMainMenuViewController.h */,
+				8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */,
+			);
+			name = Menus;
 			sourceTree = "<group>";
 		};
 		8CC90E3E16B2666C00CACB31 = {
@@ -206,6 +223,7 @@
 				8CC90E5D16B2666C00CACB31 /* NDAAppDelegate.m */,
 				8C6661A516B75C3D0056A64B /* NDAAuthenticationViewController.h */,
 				8C6661A616B75C3E0056A64B /* NDAAuthenticationViewController.m */,
+				8C73C32316C4A9170027027A /* Menus */,
 				8CC90ED516B283D800CACB31 /* NDAStreamViewController.h */,
 				8CC90ED616B283D800CACB31 /* NDAStreamViewController.m */,
 				8CC90ED816B3103400CACB31 /* NDAStreamDataSource.h */,
@@ -320,6 +338,8 @@
 				8C66618E16B7574C0056A64B /* NDAFileCell.m in Sources */,
 				8C6661A716B75C3F0056A64B /* NDAAuthenticationViewController.m in Sources */,
 				8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */,
+				8C73C32816C4A93B0027027A /* NDAMainMenuViewController.m in Sources */,
+				8C73C32B16C4AC4F0027027A /* NDAMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
