@@ -51,4 +51,20 @@
     return [[self alloc] initWithTitle:title nextController:nextController];
 }
 
+- (id)initWithTitle:(NSString *)title nextMenuItems:(NSArray *)nextMenuItems
+{
+    self = [self init];
+    if (self) {
+        self.title = title;
+        self.nextMenuItems = nextMenuItems;
+    }
+    return self;
+}
+
++ (instancetype)menuItemWithTitle:(NSString*)title nextMenuItems:(NSArray *)nextMenuItems
+{
+    return [[self alloc] initWithTitle:title nextMenuItems:nextMenuItems];
+}
+
+
 @end

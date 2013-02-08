@@ -67,7 +67,7 @@
     // Configure the cell...
     NDAMenuItem *menuItem = [self tableView:tableView menuItemForRowAtIndexPath:indexPath];
     cell.textLabel.text = menuItem.title;
-    cell.accessoryType = menuItem.nextController?UITableViewCellAccessoryDisclosureIndicator:UITableViewCellAccessoryNone;
+    cell.accessoryType = menuItem.nextController||menuItem.nextMenuItems?UITableViewCellAccessoryDisclosureIndicator:UITableViewCellAccessoryNone;
     
     return cell;
 }
@@ -77,10 +77,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIViewController *nextViewController;
+    
     NDAMenuItem *menuItem = [self tableView:tableView menuItemForRowAtIndexPath:indexPath];
     if (menuItem.nextController) {
-        UIViewController *detailViewController = [[menuItem.nextController alloc] init];
-        [self.navigationController pushViewController:detailViewController animated:YES];
+        nextViewController = [[menuItem.nextController alloc] init];
+    } else if (menuItem.nextMenuItems) {
+        NDAMenuViewController *menuController = [[NDAMenuViewController alloc] init];
+        menuController.title = menuItem.title;
+        menuController.menuItems = menuItem.nextMenuItems;
+        
+        nextViewController = menuController;
+    };
+    
+    if (nextViewController) {
+        [self.navigationController pushViewController:nextViewController animated:YES];
     }
 }
 

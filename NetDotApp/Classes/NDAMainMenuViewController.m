@@ -22,7 +22,19 @@
     if (self) {
         self.title = @"Resources";
         
-        self.menuItems = @[[NDAMenuItem menuItemWithTitle:@"User" nextController:[UITableViewController class]],
+        self.menuItems = @[[NDAMenuItem menuItemWithTitle:@"User"
+                                            nextMenuItems:@[
+                            [NDAMenuItem menuItemWithTitle:@"Retrieve a User" nextController:[UITableViewController class]],
+                            [NDAMenuItem menuItemWithTitle:@"Update a User"],
+                            [NDAMenuItem menuItemWithTitle:@"Retrieve a User's avatar image"],
+                            [NDAMenuItem menuItemWithTitle:@"Update a User's avatar image"],
+                            [NDAMenuItem menuItemWithTitle:@"Retrieve a User's cover image"],
+                            [NDAMenuItem menuItemWithTitle:@"Update a User's cover image"],
+                            [NDAMenuItem menuItemWithTitle:@"Follow a User"],
+                            [NDAMenuItem menuItemWithTitle:@"Unfollow a User"],
+                            [NDAMenuItem menuItemWithTitle:@"Mute a User"],
+                            [NDAMenuItem menuItemWithTitle:@"Unmute a User"],
+                            ]],
                            [NDAMenuItem menuItemWithTitle:@"Post"],
                            [NDAMenuItem menuItemWithTitle:@"Channel"],
                            [NDAMenuItem menuItemWithTitle:@"Message"],

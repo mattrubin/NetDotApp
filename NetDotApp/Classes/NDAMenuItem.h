@@ -13,11 +13,15 @@
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) Class nextController;
+@property (nonatomic, strong) NSArray *nextMenuItems;
 
 - (id)initWithTitle:(NSString *)title;
 + (instancetype)menuItemWithTitle:(NSString*)title;
 
 - (id)initWithTitle:(NSString *)title nextController:(Class)nextController;
 + (instancetype)menuItemWithTitle:(NSString*)title nextController:(Class)nextController;
+
+- (id)initWithTitle:(NSString *)title nextMenuItems:(NSArray *)nextMenuItems;
++ (instancetype)menuItemWithTitle:(NSString*)title nextMenuItems:(NSArray *)nextMenuItems;
 
 @end
