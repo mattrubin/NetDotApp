@@ -2,7 +2,7 @@
 //  NDAAppDelegate.m
 //  NetDotApp
 //
-//  Created by Me on 1/24/13.
+//  Created by Matt Rubin on 1/24/13.
 //  Copyright (c) 2013 Matt Rubin. All rights reserved.
 //
 
