@@ -53,7 +53,7 @@
     self.kindLabel.text = self.file.kind;
     self.mimeLabel.text = self.file.mimeType;
     self.typeLabel.text = self.file.type;
-    self.annotationsView.text = [NSString stringWithFormat:@"%@", self.file.externalRepresentation];
+    self.annotationsView.text = [NSString stringWithFormat:@"%@", [MTLJSONAdapter JSONDictionaryFromModel:self.file]];
 }
 
 @end
