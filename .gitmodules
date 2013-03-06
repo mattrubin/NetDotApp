@@ -1,3 +1,6 @@
 [submodule "External/AppDotNet"]
 	path = External/AppDotNet
 	url = git@github.com:mattrubin/AppDotNet.git
+[submodule "External/QuickDialog"]
+	path = External/QuickDialog
+	url = git://github.com/escoz/QuickDialog.git

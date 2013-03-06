@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C30D2D816E7B322006359B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30D2D716E7B322006359B5 /* MapKit.framework */; };
+		8C30D2D916E7B343006359B5 /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30D2D616E7B2DF006359B5 /* libQuickDialog.a */; };
 		8C66618816B7556E0056A64B /* NDAFileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66618716B7556E0056A64B /* NDAFileTableViewController.m */; };
 		8C66618B16B756570056A64B /* NDAFileTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66618A16B756570056A64B /* NDAFileTableDataSource.m */; };
 		8C66618E16B7574C0056A64B /* NDAFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66618D16B7574B0056A64B /* NDAFileCell.m */; };
@@ -38,6 +40,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8C30D2CF16E7B2DF006359B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CC90E6B16B26BEE00CACB31 /* AppDotNet.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DC3712216E08AE300190862;
+			remoteInfo = "AppDotNet-OSX";
+		};
+		8C30D2D316E7B2DF006359B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C30D2C916E7B2DE006359B5 /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D80B0E3313E052DF00FA85CA;
+			remoteInfo = QuickDialogExample;
+		};
+		8C30D2D516E7B2DF006359B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C30D2C916E7B2DE006359B5 /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C542393145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
 		8CC90E7416B26BEE00CACB31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8CC90E6B16B26BEE00CACB31 /* AppDotNet.xcodeproj */;
@@ -55,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C30D2C916E7B2DE006359B5 /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
+		8C30D2D716E7B322006359B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8C66618616B7556E0056A64B /* NDAFileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileTableViewController.h; sourceTree = "<group>"; };
 		8C66618716B7556E0056A64B /* NDAFileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAFileTableViewController.m; sourceTree = "<group>"; };
 		8C66618916B756560056A64B /* NDAFileTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileTableDataSource.h; sourceTree = "<group>"; };
@@ -106,18 +131,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC90E7816B26CF500CACB31 /* libAppDotNet.a in Frameworks */,
+				8C30D2D916E7B343006359B5 /* libQuickDialog.a in Frameworks */,
 				8CC90E4E16B2666C00CACB31 /* UIKit.framework in Frameworks */,
 				8CC90E5016B2666C00CACB31 /* Foundation.framework in Frameworks */,
 				8CC90E5216B2666C00CACB31 /* CoreGraphics.framework in Frameworks */,
 				8CC90EA616B26F4800CACB31 /* SystemConfiguration.framework in Frameworks */,
 				8CC90EA816B26F7900CACB31 /* MobileCoreServices.framework in Frameworks */,
 				8CC90EAA16B2706D00CACB31 /* CoreLocation.framework in Frameworks */,
+				8C30D2D816E7B322006359B5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C30D2CA16E7B2DE006359B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C30D2D416E7B2DF006359B5 /* QuickDialogExample.app */,
+				8C30D2D616E7B2DF006359B5 /* libQuickDialog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8C66618316B755560056A64B /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +210,7 @@
 				8CC90EA516B26F4800CACB31 /* SystemConfiguration.framework */,
 				8CC90EA716B26F7900CACB31 /* MobileCoreServices.framework */,
 				8CC90EA916B2706D00CACB31 /* CoreLocation.framework */,
+				8C30D2D716E7B322006359B5 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				8CC90E6B16B26BEE00CACB31 /* AppDotNet.xcodeproj */,
+				8C30D2C916E7B2DE006359B5 /* QuickDialog.xcodeproj */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -217,6 +255,7 @@
 			children = (
 				8CC90E7516B26BEE00CACB31 /* libAppDotNet.a */,
 				8CC90E7716B26BEE00CACB31 /* AppDotNetTests.octest */,
+				8C30D2D016E7B2DF006359B5 /* AppDotNet-OSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +324,10 @@
 					ProductGroup = 8CC90E6C16B26BEE00CACB31 /* Products */;
 					ProjectRef = 8CC90E6B16B26BEE00CACB31 /* AppDotNet.xcodeproj */;
 				},
+				{
+					ProductGroup = 8C30D2CA16E7B2DE006359B5 /* Products */;
+					ProjectRef = 8C30D2C916E7B2DE006359B5 /* QuickDialog.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -294,6 +337,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		8C30D2D016E7B2DF006359B5 /* AppDotNet-OSX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "AppDotNet-OSX.framework";
+			remoteRef = 8C30D2CF16E7B2DF006359B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8C30D2D416E7B2DF006359B5 /* QuickDialogExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = QuickDialogExample.app;
+			remoteRef = 8C30D2D316E7B2DF006359B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8C30D2D616E7B2DF006359B5 /* libQuickDialog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQuickDialog.a;
+			remoteRef = 8C30D2D516E7B2DF006359B5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		8CC90E7516B26BEE00CACB31 /* libAppDotNet.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -416,6 +480,7 @@
 		8CC90E6816B2666C00CACB31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetDotApp/NetDotApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -428,6 +493,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/External/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -435,6 +501,7 @@
 		8CC90E6916B2666C00CACB31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NetDotApp/NetDotApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -447,6 +514,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/External/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -16,3 +16,4 @@
 #endif
 
 #import <AppDotNet/AppDotNet.h>
+#import <QuickDialog/QuickDialog.h>
