@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C30D2D816E7B322006359B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30D2D716E7B322006359B5 /* MapKit.framework */; };
 		8C30D2D916E7B343006359B5 /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C30D2D616E7B2DF006359B5 /* libQuickDialog.a */; };
+		8C30D2E116E7B6E9006359B5 /* NDAGetUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C30D2E016E7B6E9006359B5 /* NDAGetUserController.m */; };
 		8C66618816B7556E0056A64B /* NDAFileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66618716B7556E0056A64B /* NDAFileTableViewController.m */; };
 		8C66618B16B756570056A64B /* NDAFileTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66618A16B756570056A64B /* NDAFileTableDataSource.m */; };
 		8C66618E16B7574C0056A64B /* NDAFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C66618D16B7574B0056A64B /* NDAFileCell.m */; };
@@ -20,6 +21,7 @@
 		8C73C32816C4A93B0027027A /* NDAMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */; };
 		8C73C32B16C4AC4F0027027A /* NDAMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */; };
 		8C73C32E16C4ADE40027027A /* NDAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C32D16C4ADE40027027A /* NDAMenuViewController.m */; };
+		8C9AF71216E7C75B0055831D /* NDAUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9AF71116E7C75B0055831D /* NDAUserViewController.m */; };
 		8CC47ABB16B78BAA000E6CC6 /* NDAFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */; };
 		8CC90E4E16B2666C00CACB31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4D16B2666C00CACB31 /* UIKit.framework */; };
 		8CC90E5016B2666C00CACB31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC90E4F16B2666C00CACB31 /* Foundation.framework */; };
@@ -80,6 +82,8 @@
 /* Begin PBXFileReference section */
 		8C30D2C916E7B2DE006359B5 /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
 		8C30D2D716E7B322006359B5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8C30D2DF16E7B6E9006359B5 /* NDAGetUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAGetUserController.h; sourceTree = "<group>"; };
+		8C30D2E016E7B6E9006359B5 /* NDAGetUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAGetUserController.m; sourceTree = "<group>"; };
 		8C66618616B7556E0056A64B /* NDAFileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileTableViewController.h; sourceTree = "<group>"; };
 		8C66618716B7556E0056A64B /* NDAFileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAFileTableViewController.m; sourceTree = "<group>"; };
 		8C66618916B756560056A64B /* NDAFileTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileTableDataSource.h; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		8C73C32A16C4AC4F0027027A /* NDAMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMenuItem.m; sourceTree = "<group>"; };
 		8C73C32C16C4ADE40027027A /* NDAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAMenuViewController.h; sourceTree = "<group>"; };
 		8C73C32D16C4ADE40027027A /* NDAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAMenuViewController.m; sourceTree = "<group>"; };
+		8C9AF71016E7C75B0055831D /* NDAUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAUserViewController.h; sourceTree = "<group>"; };
+		8C9AF71116E7C75B0055831D /* NDAUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAUserViewController.m; sourceTree = "<group>"; };
 		8CC47AB916B78BAA000E6CC6 /* NDAFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAFileViewController.h; sourceTree = "<group>"; };
 		8CC47ABA16B78BAA000E6CC6 /* NDAFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAFileViewController.m; sourceTree = "<group>"; };
 		8CC90E4916B2666C00CACB31 /* NetDotApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetDotApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +160,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8C30D2DD16E7B67F006359B5 /* Request Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C30D2DE16E7B689006359B5 /* User */,
+			);
+			name = "Request Controllers";
+			sourceTree = "<group>";
+		};
+		8C30D2DE16E7B689006359B5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				8C30D2DF16E7B6E9006359B5 /* NDAGetUserController.h */,
+				8C30D2E016E7B6E9006359B5 /* NDAGetUserController.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		8C66618316B755560056A64B /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +204,15 @@
 				8C73C32716C4A93B0027027A /* NDAMainMenuViewController.m */,
 			);
 			name = Menus;
+			sourceTree = "<group>";
+		};
+		8C9AF70F16E7C7380055831D /* Result Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C9AF71016E7C75B0055831D /* NDAUserViewController.h */,
+				8C9AF71116E7C75B0055831D /* NDAUserViewController.m */,
+			);
+			name = "Result Controllers";
 			sourceTree = "<group>";
 		};
 		8CC90E3E16B2666C00CACB31 = {
@@ -268,6 +300,8 @@
 				8C6661A516B75C3D0056A64B /* NDAAuthenticationViewController.h */,
 				8C6661A616B75C3E0056A64B /* NDAAuthenticationViewController.m */,
 				8C73C32316C4A9170027027A /* Menus */,
+				8C30D2DD16E7B67F006359B5 /* Request Controllers */,
+				8C9AF70F16E7C7380055831D /* Result Controllers */,
 				8CC90ED516B283D800CACB31 /* NDAStreamViewController.h */,
 				8CC90ED616B283D800CACB31 /* NDAStreamViewController.m */,
 				8CC90ED816B3103400CACB31 /* NDAStreamDataSource.h */,
@@ -410,6 +444,8 @@
 				8C73C32816C4A93B0027027A /* NDAMainMenuViewController.m in Sources */,
 				8C73C32B16C4AC4F0027027A /* NDAMenuItem.m in Sources */,
 				8C73C32E16C4ADE40027027A /* NDAMenuViewController.m in Sources */,
+				8C30D2E116E7B6E9006359B5 /* NDAGetUserController.m in Sources */,
+				8C9AF71216E7C75B0055831D /* NDAUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

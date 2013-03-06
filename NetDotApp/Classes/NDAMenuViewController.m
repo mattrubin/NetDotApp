@@ -84,11 +84,15 @@
         nextViewController = [[menuItem.nextController alloc] init];
     } else if (menuItem.nextMenuItems) {
         NDAMenuViewController *menuController = [[NDAMenuViewController alloc] init];
-        menuController.title = menuItem.title;
         menuController.menuItems = menuItem.nextMenuItems;
         
         nextViewController = menuController;
     };
+    
+    nextViewController.title = menuItem.title;
+    if ([nextViewController isKindOfClass:[QuickDialogController class]]) {
+        ((QuickDialogController *)nextViewController).root.title = menuItem.title;
+    }
     
     if (nextViewController) {
         [self.navigationController pushViewController:nextViewController animated:YES];

@@ -7,6 +7,7 @@
 //
 
 #import "NDAMainMenuViewController.h"
+#import "NDAGetUserController.h"
 #import "NDAFileTableViewController.h"
 
 
@@ -27,7 +28,8 @@
                                             nextMenuItems:@[
                                 [NDAMenuItem menuItemWithTitle:@"Lookup"
                                                  nextMenuItems:@[
-                                    [NDAMenuItem menuItemWithTitle:@"Retrieve a User"],
+                                    [NDAMenuItem menuItemWithTitle:@"Retrieve a User"
+                                                    nextController:[NDAGetUserController class]],
                                     [NDAMenuItem menuItemWithTitle:@"Retrieve multiple Users"],
                                     [NDAMenuItem menuItemWithTitle:@"Search for Users"],
                                  ]],
