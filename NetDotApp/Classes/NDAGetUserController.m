@@ -31,10 +31,15 @@
         
         [rootElement addSection:section];
         
+        QSection *parameters = [QSection new];
+        self.annotationsElement = [[QBooleanElement alloc] initWithTitle:@"Include Annotations" BoolValue:NO];
+        [parameters addElement:self.annotationsElement];
+        [rootElement addSection:parameters];
+        
         QSection *submitSection = [QSection new];
-        QButtonElement *submitButton = [[QButtonElement alloc] initWithTitle:@"Submit"];
-        submitButton.controllerAction = @"go";
-        [submitSection addElement:submitButton];
+        self.submitButton = [[QButtonElement alloc] initWithTitle:@"Submit"];
+        self.submitButton.controllerAction = @"go";
+        [submitSection addElement:self.submitButton];
         [rootElement addSection:submitSection];
         
         self.root = rootElement;
@@ -51,8 +56,13 @@
 
 - (void)go
 {
+    self.submitButton.enabled = NO;
+    
+    NSDictionary *parameters = @{ADNParameterIncludeAnnotations: @(self.annotationsElement.boolValue)};
+    
     [[ADNClient sharedClient] getUser:self.userEntry.textValue
-                withCompletionHandler:^(ADNUser *user, ADNMetadata *meta, NSError *error) {
+                       withParameters:parameters
+                    completionHandler:^(ADNUser *user, ADNMetadata *meta, NSError *error) {
                     if (user) {
                         //NSLog(@"USER: %@", user);
                         UIViewController *userViewController = [[NDAUserViewController alloc] initWithUser:user];
@@ -64,6 +74,8 @@
                         NSLog(@"ERROR: %@", error);
                         [[[UIAlertView alloc] initWithTitle:@"Error" message:error.localizedDescription delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil] show];
                     }
+                    
+                    self.submitButton.enabled = YES;
                 }];
 }
 

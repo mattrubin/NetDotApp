@@ -12,5 +12,7 @@
 @interface NDAGetUserController : QuickDialogController
 
 @property (nonatomic, strong) QEntryElement *userEntry;
+@property (nonatomic, strong) QBooleanElement *annotationsElement;
+@property (nonatomic, strong) QButtonElement *submitButton;
 
 @end
